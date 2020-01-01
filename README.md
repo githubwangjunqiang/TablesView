@@ -7,6 +7,7 @@ Android-小强随手撸的自定义控件
 使用方式：下面是Android studio 使用方式 其他方式请自己生成jar
 
 1 添加仓库：在项目的build.gradle 添加jitpack仓库
+
     repositories {
             google()
             jcenter()
