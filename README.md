@@ -45,7 +45,7 @@ Android-小强随手撸的自定义控件
                 android:textColor="#fff" />
         </com.xiaoqiang.xqtablesview.MaiTablesView>
 
-        属性设置：
+        属性介绍（一下代码不用添加 只是描述）：
 
             <!--    表盘自定义属性-->
             <declare-styleable name="MaiTablesView">
