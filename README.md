@@ -20,7 +20,7 @@ Android-小强随手撸的自定义控件
 	        implementation 'com.github.githubwangjunqiang:TablesView:1.0'
 	}
 
-3 xml 中引用：
+3 xml 中引用：MaiTablesView 此控件继承自FrameLayout 您可以随意添加子view
 
     <com.xiaoqiang.xqtablesview.MaiTablesView
             android:id="@+id/main_view_mai"
