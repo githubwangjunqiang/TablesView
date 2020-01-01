@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52C3F0"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.xiaoqiang.xqtablesview.MaiTablesView
+        android:id="@+id/main_view_mai"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:tables_color="@android:color/white"
+        app:tables_colorprogress="@android:color/holo_red_dark"
+        app:tables_groups="8"
+        app:tables_groupscount="10"
+        app:tables_percentagelong="0.1"
+        app:tables_percentageshort="0.05"
+        app:tables_progressvalue="10"
+        app:tables_strokewidth="4dp"
+        app:tables_strokewidthprogress="6dp">
+
+        <TextView
+            android:onClick="doClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="点击我随即旋转哦"
+            android:textColor="#fff" />
+    </com.xiaoqiang.xqtablesview.MaiTablesView>
+
+
+</LinearLayout>
