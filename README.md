@@ -48,26 +48,24 @@ Android-小强随手撸的自定义控件
         属性介绍（一下代码不用添加 只是描述）：
 
             <!--    表盘自定义属性-->
-            <declare-styleable name="MaiTablesView">
                 <!--        有几组数据 默认一组-->
-                <attr name="tables_groups" format="integer" />
+                < name="tables_groups" format="integer" />
                 <!--        一组有几个刻度值  默认10个-->
-                <attr name="tables_groupscount" format="integer" />
+                < name="tables_groupscount" format="integer" />
                 <!--        如果刻度长度值 有长有短  那么此值代表长刻度值占view 宽度的 百分比值 默认0.1-->
-                <attr name="tables_percentagelong" format="float" />
+                < name="tables_percentagelong" format="float" />
                 <!--        如果刻度长度值 有长有短  那么此值代表短刻度值占view 宽度的 百分比值 默认0.05-->
-                <attr name="tables_percentageshort" format="float" />
+                < name="tables_percentageshort" format="float" />
                 <!--        刻度的宽度 默认8px-->
-                <attr name="tables_strokewidth" format="dimension" />
+                < name="tables_strokewidth" format="dimension" />
                 <!--        刻度的宽度 进度值 默认10px-->
-                <attr name="tables_strokewidthprogress" format="dimension" />
+                < name="tables_strokewidthprogress" format="dimension" />
                 <!--        刻度的颜色 默认白色-->
-                <attr name="tables_color" format="color" />
+                < name="tables_color" format="color" />
                 <!--        刻度的颜色 进度值 默认红色-->
-                <attr name="tables_colorprogress" format="color" />
+                < name="tables_colorprogress" format="color" />
                 <!--        进度值 默认0  不能大于总刻度值-->
-                <attr name="tables_progressvalue" format="integer" />
-            </declare-styleable>
+                < name="tables_progressvalue" format="integer" />
 
             代码中可以使用view.set***(**) 方式设置 同上，代码设置的属性值会覆盖xml中设置的值
 
