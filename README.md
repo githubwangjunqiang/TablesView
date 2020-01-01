@@ -14,8 +14,77 @@ Android-小强随手撸的自定义控件
             maven { url 'https://jitpack.io' }
         }
 
-2 添加依赖库
+2 添加依赖库:在app根目录下的 build.gradle 添加如下代码
 
     dependencies {
 	        implementation 'com.github.githubwangjunqiang:TablesView:1.0'
 	}
+
+3 xml 中引用：
+
+    <com.xiaoqiang.xqtablesview.MaiTablesView
+            android:id="@+id/main_view_mai"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:tables_color="@android:color/white"
+            app:tables_colorprogress="@android:color/holo_red_dark"
+            app:tables_groups="8"
+            app:tables_groupscount="10"
+            app:tables_percentagelong="0.1"
+            app:tables_percentageshort="0.05"
+            app:tables_progressvalue="10"
+            app:tables_strokewidth="4dp"
+            app:tables_strokewidthprogress="6dp">
+
+            <TextView
+                android:onClick="doClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="点击我随即旋转哦"
+                android:textColor="#fff" />
+        </com.xiaoqiang.xqtablesview.MaiTablesView>
+
+        属性设置：
+
+            <!--    表盘自定义属性-->
+            <declare-styleable name="MaiTablesView">
+                <!--        有几组数据 默认一组-->
+                <attr name="tables_groups" format="integer" />
+                <!--        一组有几个刻度值  默认10个-->
+                <attr name="tables_groupscount" format="integer" />
+                <!--        如果刻度长度值 有长有短  那么此值代表长刻度值占view 宽度的 百分比值 默认0.1-->
+                <attr name="tables_percentagelong" format="float" />
+                <!--        如果刻度长度值 有长有短  那么此值代表短刻度值占view 宽度的 百分比值 默认0.05-->
+                <attr name="tables_percentageshort" format="float" />
+                <!--        刻度的宽度 默认8px-->
+                <attr name="tables_strokewidth" format="dimension" />
+                <!--        刻度的宽度 进度值 默认10px-->
+                <attr name="tables_strokewidthprogress" format="dimension" />
+                <!--        刻度的颜色 默认白色-->
+                <attr name="tables_color" format="color" />
+                <!--        刻度的颜色 进度值 默认红色-->
+                <attr name="tables_colorprogress" format="color" />
+                <!--        进度值 默认0  不能大于总刻度值-->
+                <attr name="tables_progressvalue" format="integer" />
+            </declare-styleable>
+
+            代码中可以使用view.set***(**) 方式设置 同上，代码设置的属性值会覆盖xml中设置的值
+
+
+4代码中初始化：
+
+     MaiTablesView mMaiTablesView = findViewById(R.id.main_view_mai);
+
+     //设置进度值
+             mMaiTablesView.setProgressValue(2);
+
+             progressvalue 属性是进度值 您可以在代码当中随意设置 不能超过刻度总和
+          也可以结合动画设置
+
+     // 内置了 随机动画 调用如下代码 会自动旋转进度值和关闭旋转
+            mMaiTablesView.startRandomRoate();//此函数为开启动画
+            mMaiTablesView.closeRandomRoate();//此函数为关闭动画
+
+
+

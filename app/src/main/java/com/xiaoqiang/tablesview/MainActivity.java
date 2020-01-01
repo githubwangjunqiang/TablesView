@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mMaiTablesView = findViewById(R.id.main_view_mai);
+        //设置进度值
+        mMaiTablesView.setProgressValue(2);
     }
 
     public void doClick(View view) {
