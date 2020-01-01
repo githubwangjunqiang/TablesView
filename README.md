@@ -15,3 +15,7 @@ Android-小强随手撸的自定义控件
         }
 
 2 添加依赖库
+
+    dependencies {
+	        implementation 'com.github.githubwangjunqiang:TablesView:1.0'
+	}
