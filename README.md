@@ -87,4 +87,6 @@ Android-小强随手撸的自定义控件
             mMaiTablesView.closeRandomRoate();//此函数为关闭动画
 
 
+5如果您 开启了混淆 请添加下面的混淆规则 本库都是自定义view 所以 不要混淆本库 本库包名 com.xiaoqiang.xqtablesview
 
+        -keep public class com.xiaoqiang.xqtablesview.**
